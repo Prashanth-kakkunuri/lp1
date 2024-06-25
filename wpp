@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Web Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f0f0f0;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            font-size: 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            animation: slideInDown 1s ease-out;
+        }
+        main {
+            padding: 6rem 1rem 2rem 1rem;
+        }
+        section {
+            background: white;
+            margin: 1rem 0;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-out;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            animation: slideInUp 1s ease-out;
+        }
+
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @media (min-width: 600px) {
+            main {
+                padding: 6rem 2rem 2rem 2rem;
+            }
+            section {
+                max-width: 600px;
+                margin: 2rem auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    My Animated Website
+</header>
+
+<main>
+    <section>
+        <h2>Section 1</h2>
+        <p>This is the first section of the page. It slides in smoothly from the bottom when you load the page.</p>
+    </section>
+    <section>
+        <h2>Section 2</h2>
+        <p>This is the second section of the page. It also slides in smoothly from the bottom, adding to the dynamic feel of the site.</p>
+    </section>
+    <section>
+        <h2>Section 3</h2>
+        <p>This is the third section. Notice how each section appears with a slight delay, creating a staggered effect.</p>
+    </section>
+</main>
+
+<footer>
+    © 2024 My Animated Website
+</footer>
+
+</body>
+</html>
